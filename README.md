@@ -3,8 +3,7 @@
 
 
 <img width="677" height="821" alt="image" src="https://github.com/user-attachments/assets/85509be4-b2d3-406d-950f-8f5ebcf683dc"/>
-[Main psd](https://github.com/user-attachments/assets/b143d147-dfa8-478e-8ead-1bc3f3e0fabf)
-[Main psd (1)](https://github.com/user-attachments/assets/493cfca9-958a-4db9-a5e7-09d0bdd2dbba)
+
 
 
 

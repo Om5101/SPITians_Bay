@@ -36,14 +36,15 @@ A web application designed to help college students (especially freshers) easily
 
 ---
 
-### Comparision 
+### 🖼️ Comparison  
+
 <p align="center">
-  <img src="![Main psd](https://github.com/user-attachments/assets/063f3ea2-4cdd-4bb1-9c0f-7e6930723e31)" width="85%" />
+  <img src="https://github.com/user-attachments/assets/063f3ea2-4cdd-4bb1-9c0f-7e6930723e31" width="85%" />
 </p>
 <br>
 
 <p align="center">
-  <img src="![Main psd (1)](https://github.com/user-attachments/assets/769fc1cb-e240-49ee-8f6e-9a146fe8280d)" width="85%" />
+  <img src="https://github.com/user-attachments/assets/769fc1cb-e240-49ee-8f6e-9a146fe8280d" width="85%" />
 </p>
 <br>
 

@@ -4,16 +4,6 @@
 A web application designed to help college students (especially freshers) easily find PG accommodations listed by seniors, promoting transparency, affordability, and stronger community bonds.
 </p>
 
----
-
-## 🎯 Demo
-<p align="center">
-  <a href="https://spi-tians-bay-seaching-algo-proto-t-six.vercel.app/" target="_blank">
-    <b>🚀 Click Here to View Live Demo</b>
-  </a>
-</p>
-
----
 
 ## 📌 Problem Overview
 
@@ -36,6 +26,27 @@ A web application designed to help college students (especially freshers) easily
 <br>
 
 ---
+
+## 🎯 Demo
+<p align="center">
+  <a href="https://spi-tians-bay-seaching-algo-proto-t-six.vercel.app/" target="_blank">
+    <b>🚀 Click Here to View Live Demo</b>
+  </a>
+</p>
+
+---
+
+### Comparision 
+<p align="center">
+  <img src="![Main psd](https://github.com/user-attachments/assets/081cb615-327c-4db8-bbc5-5a9fc515580a)" width="85%" />
+</p>
+<br>
+
+<p align="center">
+  <img src="![Main psd (1)](https://github.com/user-attachments/assets/838f9887-d184-4ce0-927b-053136336855)" width="85%" />
+</p>
+<br>
+
 
 ## 💡 Proposed Solution
 

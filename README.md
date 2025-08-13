@@ -1,11 +1,9 @@
-
-
-
-
-<img width="677" height="821" alt="image" src="https://github.com/user-attachments/assets/85509be4-b2d3-406d-950f-8f5ebcf683dc"/>
-
-
-
+<img width="2400" height="1282" alt="1_Students-Migration-to-Urban-Cities-for-College-Admission" src="https://github.com/user-attachments/assets/2ab85ea4-b6e9-4eba-97ad-9bea113ba883" />
+<img width="2400" height="1286" alt="2_Current-Problems-for-New-Joiners" src="https://github.com/user-attachments/assets/a4c918d5-d4e3-4f33-b7d5-b410933a2ae1" />
+<img width="2400" height="1282" alt="3_3-Difficulty-in-Connecting-with-Seniors" src="https://github.com/user-attachments/assets/5c673611-0fcb-4d47-8c1a-75784af34ba0" />
+<img width="2400" height="1286" alt="4_A-college-exclusive-PG-listing-web-application-where" src="https://github.com/user-attachments/assets/f039fb0d-164c-46b2-9abd-818041508b93" />
+<img width="2400" height="1286" alt="5_" src="https://github.com/user-attachments/assets/43f5153d-7ee3-4667-ac6a-e44aeef0f6e4" />
+<img width="2400" height="1244" alt="6_Stronger-Senior-Junior-Bond-Encourages-interaction-between-seniors-and-freshers-beyond-academics" src="https://github.com/user-attachments/assets/4d3fa858-6e04-4421-a1fb-9eab0972a8e1" />
 
 Fresher Flow
 <img width="1198" height="681" alt="image" src="https://github.com/user-attachments/assets/e6255c88-9681-442c-955e-5b6d285761c0" />

@@ -9,8 +9,8 @@
 
 Fresher Flow
 <img width="1198" height="681" alt="image" src="https://github.com/user-attachments/assets/e6255c88-9681-442c-955e-5b6d285761c0" />
-<img width="1147" height="558" alt="image" src="https://github.com/user-attachments/assets/848bba4f-6bf5-4996-9321-5238c40bef6a" />
-<img width="1204" height="598" alt="image" src="https://github.com/user-attachments/assets/0ebefc46-a73f-42d6-8537-213ae0ab20d5" />
+<img width="1140" height="623" alt="image" src="https://github.com/user-attachments/assets/fd6c6bf1-963c-470a-ab59-f9193cb7d353" />
+<img width="1363" height="705" alt="image" src="https://github.com/user-attachments/assets/29fd28e9-9f7a-42b2-be58-754e92e5de2b" />
 <img width="1235" height="815" alt="image" src="https://github.com/user-attachments/assets/777b7b9e-7107-4059-944d-f34b908e688f" />
 <img width="811" height="407" alt="image" src="https://github.com/user-attachments/assets/c4b784f5-fce1-4ccf-99d9-1638fb950546" />
 <img width="1542" height="693" alt="image" src="https://github.com/user-attachments/assets/2a5fccf5-0769-4b92-82c0-e370fd00e883" />

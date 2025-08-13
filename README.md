@@ -38,7 +38,7 @@ A web application designed to help college students (especially freshers) easily
 
 ### Comparision 
 <p align="center">
-  <img src="![Main psd](https://github.com/user-attachments/assets/081cb615-327c-4db8-bbc5-5a9fc515580a)" width="85%" />
+  <img src="![Main psd](https://github.com/user-attachments/assets/2b29bde9-4d1d-44a9-8ce8-c4177485e92b)" width="85%" />
 </p>
 <br>
 

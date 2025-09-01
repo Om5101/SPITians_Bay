@@ -29,7 +29,7 @@ A web application designed to help college students (especially freshers) easily
 
 ## 🎯 Demo
 <p align="center">
-  <a href="[https://spi-tians-bay-seaching-algo-proto-t-six.vercel.app/](https://spi-tians-bay-seaching-algo-proto-type-v2-ixqy63nkj.vercel.app/)" target="_blank">
+  <a href="https://spi-tians-bay-seaching-algo-proto-t-six.vercel.app/" target="_blank">
     <b>🚀 Click Here to View Live Demo</b>
   </a>
 </p>

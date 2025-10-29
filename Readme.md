@@ -1,10 +1,10 @@
 # 🏠 SPITians Bay — Innovothon Finale Project
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/16b2c2da-ee9f-463a-bbb8-afb3ca7ae169" width="90%" alt="Project Banner"/>
+<center>
+  <img src="https://github.com/user-attachments/assets/16b2c2da-ee9f-463a-bbb8-afb3ca7ae169" alt="Project Banner" width="90%"/>
   <br>
   <em>Figure 1: SPITians Bay – Community Platform Prototype</em>
-</p>
+</center>
 
 > **Platform for SPIT students to find nearby PGs without brokers — built using Core Java, JDBC, and MySQL.**  
 > Designed and implemented following **Software Development Life Cycle (SDLC)** and **Hackathon DDLC (Design & Development Life Cycle)**.
@@ -12,20 +12,20 @@
 ---
 
 ## 📋 Table of Contents
-1. [Project Overview](#-project-overview)
-2. [Tech Stack](#-tech-stack)
-3. [SDLC Phases](#-sdlc-phases)
-   - [Requirement Gathering](#1️⃣-requirement-gathering)
-   - [Defining / Analysis](#2️⃣-defining--analysis-phase)
-   - [Designing](#3️⃣-designing-phase)
-   - [Building / Implementation](#4️⃣-building--implementation-phase)
-   - [Testing](#5️⃣-testing-phase)
-   - [Deployment](#6️⃣-deployment-phase)
-4. [DDLC (Hackathon Workflow)](#-ddlc-hackathon-workflow)
-5. [Project Structure](#-project-structure)
-6. [Sample Test Cases](#-sample-test-cases)
-7. [Future Scope](#-future-scope)
-8. [Key Takeaways](#-key-takeaways)
+1. [Project Overview](#-project-overview)  
+2. [Tech Stack](#-tech-stack)  
+3. [SDLC Phases](#-sdlc-phases)  
+   - [Requirement Gathering](#1️⃣-requirement-gathering)  
+   - [Defining / Analysis](#2️⃣-defining--analysis-phase)  
+   - [Designing](#3️⃣-designing-phase)  
+   - [Building / Implementation](#4️⃣-building--implementation-phase)  
+   - [Testing](#5️⃣-testing-phase)  
+   - [Deployment](#6️⃣-deployment-phase)  
+4. [DDLC (Hackathon Workflow)](#-ddlc-hackathon-workflow)  
+5. [Project Structure](#-project-structure)  
+6. [Sample Test Cases](#-sample-test-cases)  
+7. [Future Scope](#-future-scope)  
+8. [Key Takeaways](#-key-takeaways)  
 9. [Contact](#-contact)
 
 ---
@@ -42,9 +42,9 @@ Help juniors find verified, affordable PGs through seniors already residing near
 ---
 
 ## 🧑‍💻 Tech Stack
-- **Language:** Java (Core + OOP)
-- **Database:** MySQL (via JDBC)
-- **Architecture:** MVC (Model–View–Controller)
+- **Language:** Java (Core + OOP)  
+- **Database:** MySQL (via JDBC)  
+- **Architecture:** MVC (Model–View–Controller)  
 - **Type:** Console-based Java Prototype
 
 ---
@@ -60,11 +60,11 @@ Help juniors find verified, affordable PGs through seniors already residing near
 > **Problem Statement:**  
 > “Create a community app where SPIT seniors can post PG vacancies and juniors can find verified, affordable accommodations without brokers.”
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/590a7d93-94ad-41c0-959c-09ac28fbceaa" width="85%" alt="Requirement Gathering"/>
+<center>
+  <img src="https://github.com/user-attachments/assets/590a7d93-94ad-41c0-959c-09ac28fbceaa" alt="Requirement Gathering" width="85%"/>
   <br>
   <em>Figure 2: Requirement Gathering and Problem Discovery Process</em>
-</p>
+</center>
 
 ---
 
@@ -86,36 +86,37 @@ Help juniors find verified, affordable PGs through seniors already residing near
 - **Java** chosen for modularity and OOP design — allows rapid prototype changes.  
 - **Database:** MySQL with normalized schema and foreign key constraints.  
 
-**Core Design Choices:**
+**Core Design Choices:**  
 - Encapsulation in entity classes  
 - Polymorphism for role-based behavior  
-- Separation of concerns (DAO, Service, Controller layers)  
+- Separation of concerns (DAO, Service, Controller layers)
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/79648441-401d-4249-a770-f34943d929df" width="80%" alt="Architecture Diagram"/>
+<center>
+  <img src="https://github.com/user-attachments/assets/79648441-401d-4249-a770-f34943d929df" alt="Architecture Diagram" width="80%"/>
   <br>
   <em>Figure 3: High-Level System Architecture (MVC + DAO Pattern)</em>
-</p>
+</center>
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/69b6176d-80e9-4f78-b29e-88e9db74bbb7" width="70%" alt="Use Case Diagram"/>
+<center>
+  <img src="https://github.com/user-attachments/assets/69b6176d-80e9-4f78-b29e-88e9db74bbb7" alt="Use Case Diagram" width="70%"/>
   <br>
   <em>Figure 4: Use Case Diagram – Role Interactions and System Flow</em>
-</p>
+</center>
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" width="65%" alt="Database Tables"/>
+<center>
+  <img src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" alt="Database Tables" width="65%"/>
   <br>
   <em>Figure 5: Database Schema and Table Relationships</em>
-</p>
+</center>
 
 ---
 
 ### **4️⃣ Building / Implementation Phase**
 
 ## 📂 Project Structure
-<p align="center">
-<pre>
+<center>
+
+<pre style="text-align:left; display:inline-block;">
 src/main/java/com/spitbay/
 ├── Main.java                  # Application entry point
 ├── controller/                # Controllers for user interaction
@@ -148,7 +149,8 @@ src/main/java/com/spitbay/
 └── util/                      # Utilities
     └── SecurityUtil.java      # Security utilities (password hashing)
 </pre>
-</p>
+
+</center>
 
 ---
 
@@ -165,28 +167,26 @@ src/main/java/com/spitbay/
 - Filter blogs using hashtags  
 
 #### 💡 **Algorithmic Highlights**
-- **Custom Search Algorithm:**  
-  Computes *Compound Match Score* using weighted parameters (Rent, Distance, Food, Wi-Fi, Sharing, Furnishing).  
+- **Custom Search Algorithm:** Computes *Compound Match Score* using weighted parameters (Rent, Distance, Food, Wi-Fi, Sharing, Furnishing).  
   Implements **QuickSort** for ranking efficiency.  
-- **Hashtag Blog Filtering:**  
-  Uses **HashSet** for fast, duplicate-free filtering.
+- **Hashtag Blog Filtering:** Uses **HashSet** for fast, duplicate-free filtering.
 
 ---
 
 ## 🧪 5️⃣ Testing Phase
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/4a1b848a-849a-4148-8956-ce7dfd1dd71d" width="75%" alt="Testing Screenshot"/>
+<center>
+  <img src="https://github.com/user-attachments/assets/4a1b848a-849a-4148-8956-ce7dfd1dd71d" alt="Testing Screenshot" width="75%"/>
   <br>
   <em>Figure 6: Functional and Unit Testing Execution</em>
-</p>
+</center>
 
-<p align="center">
-  <em>Unit Test Cases</em>
-</p>
+<center>
+  <strong>Unit Test Cases</strong>
+</center>
 
-<p align="center">
-
+<center>
+<div style="display:inline-block; text-align:left;">
 | No. | Description | Input | Expected Output | Result |
 |:--:|:--|:--|:--|:--:|
 | 1 | Valid SPIT email check | `om@spit.ac.in` | true | ✅ |
@@ -194,15 +194,15 @@ src/main/java/com/spitbay/
 | 3 | Password hashing validation | `12345` | Returns hashed value | ✅ |
 | 4 | Database connection test | JDBC URL | Connection successful | ✅ |
 | 5 | Scoring algorithm accuracy | Rent=10k, Dist=2km | Returns computed score | ✅ |
+</div>
+</center>
 
-</p>
+<center>
+  <strong>Functional Test Cases</strong>
+</center>
 
-<p align="center">
-  <em>Functional Test Cases</em>
-</p>
-
-<p align="center">
-
+<center>
+<div style="display:inline-block; text-align:left;">
 | No. | Description | Input | Expected Output | Result |
 |:--:|:--|:--|:--|:--:|
 | 6 | New registration | Valid SPIT mail | “Registration Successful” | ✅ |
@@ -210,8 +210,8 @@ src/main/java/com/spitbay/
 | 8 | PG search filtering | Rent ≤15000, Wi-Fi=Yes | Filtered PG list | ✅ |
 | 9 | Invalid login handling | Wrong password | “Invalid credentials” | ✅ |
 | 10 | Search result ranking | Multiple PGs | Sorted list by score | ✅ |
-
-</p>
+</div>
+</center>
 
 ---
 
@@ -225,8 +225,8 @@ src/main/java/com/spitbay/
 ## 🧱 DDLC (Hackathon Workflow)
 > Simplified **Design & Development Life Cycle (DDLC)** followed during the 48-hour Innovothon hackathon.
 
-<p align="center">
-
+<center>
+<div style="display:inline-block; text-align:left;">
 | Phase | Description |
 |-------|--------------|
 | **1. Ideation & Research** | Brainstormed real issues faced by SPIT students (PG search & brokerage problems). |
@@ -234,8 +234,8 @@ src/main/java/com/spitbay/
 | **3. Development** | Implemented modules sequentially — User → PG → Search → Blog. |
 | **4. Testing & Debugging** | Performed both unit and integration testing for key modules. |
 | **5. Presentation & Demo** | Showcased impact — projected brokerage savings of ₹53+ Lakh for 450+ students. |
-
-</p>
+</div>
+</center>
 
 ---
 
@@ -252,7 +252,7 @@ src/main/java/com/spitbay/
 - Applied **OOP principles** (Encapsulation, Polymorphism, Modularity).  
 - Developed **custom PG scoring algorithm** for personalized recommendations.  
 - Delivered a **real-world impactful solution** for SPIT students.  
-- Estimated **₹53+ Lakh brokerage savings** across 450+ students.  
+- Estimated **₹53+ Lakh brokerage savings** across 450+ students.
 
 ---
 
@@ -263,8 +263,6 @@ src/main/java/com/spitbay/
 **🔗 LinkedIn:** [linkedin.com/in/omshinde](#)  
 **💻 GitHub Repository:** [SPITians Bay](https://github.com/Om5101/SPITians_Bay)
 
----
-
-<p align="center">
+<center>
   ⭐ <em>If you found this project insightful, consider giving it a star!</em> ⭐
-</p>
+</center>

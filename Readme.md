@@ -1,8 +1,12 @@
 # 🏠 SPITians Bay — Innovothon Finale Project
 
-![Project Banner](https://github.com/user-attachments/assets/16b2c2da-ee9f-463a-bbb8-afb3ca7ae169)
-> **Platform for SPIT students to find nearby PGs without brokers — built using Core Java, JDBC, and MySQL.**
->
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/16b2c2da-ee9f-463a-bbb8-afb3ca7ae169" width="90%" alt="Project Banner"/>
+  <br>
+  <em>Figure 1: SPITians Bay – Community Platform Prototype</em>
+</p>
+
+> **Platform for SPIT students to find nearby PGs without brokers — built using Core Java, JDBC, and MySQL.**  
 > Designed and implemented following **Software Development Life Cycle (SDLC)** and **Hackathon DDLC (Design & Development Life Cycle)**.
 
 ---
@@ -27,7 +31,6 @@
 ---
 
 ## 🚀 Project Overview
-
 **SPITians Bay** is a community platform that enables SPIT students to find **PG accommodations verified by seniors** — completely **broker-free**.
 
 - Focused on solving a real student problem: *lack of local rate knowledge and excessive broker charges*.  
@@ -57,8 +60,11 @@ Help juniors find verified, affordable PGs through seniors already residing near
 > **Problem Statement:**  
 > “Create a community app where SPIT seniors can post PG vacancies and juniors can find verified, affordable accommodations without brokers.”
 
-📸 **Survey & Problem Discovery**
-<img width="800" alt="Requirement Gathering" src="https://github.com/user-attachments/assets/590a7d93-94ad-41c0-959c-09ac28fbceaa" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/590a7d93-94ad-41c0-959c-09ac28fbceaa" width="85%" alt="Requirement Gathering"/>
+  <br>
+  <em>Figure 2: Requirement Gathering and Problem Discovery Process</em>
+</p>
 
 ---
 
@@ -85,55 +91,64 @@ Help juniors find verified, affordable PGs through seniors already residing near
 - Polymorphism for role-based behavior  
 - Separation of concerns (DAO, Service, Controller layers)  
 
-📸 **High-Level System Architecture**
-![Architecture Diagram](https://github.com/user-attachments/assets/79648441-401d-4249-a770-f34943d929df)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/79648441-401d-4249-a770-f34943d929df" width="80%" alt="Architecture Diagram"/>
+  <br>
+  <em>Figure 3: High-Level System Architecture (MVC + DAO Pattern)</em>
+</p>
 
-📸 **Use Case Diagram**
-<img width="800" alt="Use Case Diagram" src="https://github.com/user-attachments/assets/69b6176d-80e9-4f78-b29e-88e9db74bbb7" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/69b6176d-80e9-4f78-b29e-88e9db74bbb7" width="70%" alt="Use Case Diagram"/>
+  <br>
+  <em>Figure 4: Use Case Diagram – Role Interactions and System Flow</em>
+</p>
 
-📸 **Database Schema**
-<img width="600" alt="Database Tables" src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" width="65%" alt="Database Tables"/>
+  <br>
+  <em>Figure 5: Database Schema and Table Relationships</em>
+</p>
 
 ---
 
 ### **4️⃣ Building / Implementation Phase**
 
 ## 📂 Project Structure
-
-```
+<p align="center">
+<pre>
 src/main/java/com/spitbay/
-├── Main.java                 # Application entry point
-├── controller/               # Controllers for user interaction
-│   ├── MainController.java   # Main application flow
-│   └── InputHandler.java     # Input validation
-├── model/                    # Data models
-│   ├── User.java            # Base user model
-│   ├── Senior.java          # Senior user model
-│   ├── PGListing.java       # PG listing model
-│   ├── Blog.java            # Blog model
-│   └── SearchPreferences.java # Search preferences
-├── service/                  # Business logic layer
-│   ├── UserService.java     # User operations
-│   ├── PGService.java       # PG listing operations
-│   ├── BlogService.java     # Blog operations
-│   └── ScoringService.java  # PG scoring algorithm
-├── dao/                      # Data access layer
-│   ├── SeniorDAO.java       # Senior data access
-│   ├── PGListingDAO.java    # PG listing data access
-│   └── BlogDAO.java         # Blog data access
-├── view/                     # View layer for UI
-│   ├── MenuView.java        # Menu displays
-│   ├── AuthView.java        # Authentication views
-│   ├── BlogView.java        # Blog displays
-│   └── PGView.java          # PG listing displays
-├── database/                 # Database connection
+├── Main.java                  # Application entry point
+├── controller/                # Controllers for user interaction
+│   ├── MainController.java    # Main application flow
+│   └── InputHandler.java      # Input validation and routing
+├── model/                     # Data models
+│   ├── User.java              # Base user model
+│   ├── Senior.java            # Senior user model
+│   ├── PGListing.java         # PG listing model
+│   ├── Blog.java              # Blog model
+│   └── SearchPreferences.java # User search preferences
+├── service/                   # Business logic layer
+│   ├── UserService.java       # Handles registration & login
+│   ├── PGService.java         # PG listing logic
+│   ├── BlogService.java       # Blog operations
+│   └── ScoringService.java    # Custom PG scoring algorithm
+├── dao/                       # Data access layer
+│   ├── SeniorDAO.java         # Senior data access
+│   ├── PGListingDAO.java      # PG listing data access
+│   └── BlogDAO.java           # Blog data access
+├── view/                      # Console-based UI
+│   ├── MenuView.java          # Navigation menu
+│   ├── AuthView.java          # Registration/Login screens
+│   ├── BlogView.java          # Blog display and filters
+│   └── PGView.java            # PG listing results
+├── database/                  # Database connection
 │   └── DatabaseConnection.java
-├── manager/                  # Service management
+├── manager/                   # Manages services
 │   └── ServiceManager.java
-└── util/                     # Utilities
-    └── SecurityUtil.java    # Security utilities
-```
-
+└── util/                      # Utilities
+    └── SecurityUtil.java      # Security utilities (password hashing)
+</pre>
+</p>
 
 ---
 
@@ -160,12 +175,17 @@ src/main/java/com/spitbay/
 
 ## 🧪 5️⃣ Testing Phase
 
-📸 **Testing Screenshots**
-![Testing Screenshot](https://github.com/user-attachments/assets/4a1b848a-849a-4148-8956-ce7dfd1dd71d)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4a1b848a-849a-4148-8956-ce7dfd1dd71d" width="75%" alt="Testing Screenshot"/>
+  <br>
+  <em>Figure 6: Functional and Unit Testing Execution</em>
+</p>
 
-Performed both **Unit** and **Functional** testing for validation.
+<p align="center">
+  <em>Unit Test Cases</em>
+</p>
 
-### ✅ **Unit Test Cases**
+<p align="center">
 
 | No. | Description | Input | Expected Output | Result |
 |:--:|:--|:--|:--|:--:|
@@ -175,7 +195,13 @@ Performed both **Unit** and **Functional** testing for validation.
 | 4 | Database connection test | JDBC URL | Connection successful | ✅ |
 | 5 | Scoring algorithm accuracy | Rent=10k, Dist=2km | Returns computed score | ✅ |
 
-### ✅ **Functional Test Cases**
+</p>
+
+<p align="center">
+  <em>Functional Test Cases</em>
+</p>
+
+<p align="center">
 
 | No. | Description | Input | Expected Output | Result |
 |:--:|:--|:--|:--|:--:|
@@ -184,6 +210,8 @@ Performed both **Unit** and **Functional** testing for validation.
 | 8 | PG search filtering | Rent ≤15000, Wi-Fi=Yes | Filtered PG list | ✅ |
 | 9 | Invalid login handling | Wrong password | “Invalid credentials” | ✅ |
 | 10 | Search result ranking | Multiple PGs | Sorted list by score | ✅ |
+
+</p>
 
 ---
 
@@ -195,7 +223,9 @@ Performed both **Unit** and **Functional** testing for validation.
 ---
 
 ## 🧱 DDLC (Hackathon Workflow)
-> Simplified **Design & Development Life Cycle (DDLC)** followed during the 48-hour hackathon.
+> Simplified **Design & Development Life Cycle (DDLC)** followed during the 48-hour Innovothon hackathon.
+
+<p align="center">
 
 | Phase | Description |
 |-------|--------------|
@@ -204,6 +234,8 @@ Performed both **Unit** and **Functional** testing for validation.
 | **3. Development** | Implemented modules sequentially — User → PG → Search → Blog. |
 | **4. Testing & Debugging** | Performed both unit and integration testing for key modules. |
 | **5. Presentation & Demo** | Showcased impact — projected brokerage savings of ₹53+ Lakh for 450+ students. |
+
+</p>
 
 ---
 
@@ -233,4 +265,6 @@ Performed both **Unit** and **Functional** testing for validation.
 
 ---
 
-⭐ *If you found this project insightful, consider giving it a star!*
+<p align="center">
+  ⭐ <em>If you found this project insightful, consider giving it a star!</em> ⭐
+</p>

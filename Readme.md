@@ -14,7 +14,7 @@
 1. [Project Overview](#-project-overview)  
 2. [Tech Stack](#-tech-stack)  
 3. [SDLC Phases](#-sdlc-phases)  
-4. [DDLC (Hackathon Workflow)](#-ddlc-hackathon-workflow)  
+4. [Hackathon Workflow](#-ddlc-hackathon-workflow)  
 5. [Project Structure](#-project-structure)  
 6. [Sample Test Cases](#-sample-test-cases)  
 7. [Future Scope](#-future-scope)  
@@ -167,7 +167,7 @@ src/main/java/com/spitbay/
 
 ---
 
-## 🧱 DDLC (Hackathon Workflow)
+## 🧱 Hackathon Workflow
 
 <div align="center">
 

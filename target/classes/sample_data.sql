@@ -1,12 +1,45 @@
--- Insert sample seniors
-INSERT INTO seniors (uid, password) VALUES
-('senior1', 'password123'),
-('senior2', 'password123'),
-('senior3', 'password123'),
-('senior4', 'password123'),
-('senior5', 'password123');
+-- ===========================================
+-- SPIT BAY SAMPLE DATA - EXECUTION ORDER
+-- ===========================================
+-- This file is designed to be executed in MySQL Workbench
+-- without foreign key constraint violations
+-- 
+-- SECURITY NOTE: All passwords are BCrypt hashed for security.
+-- Original password for all test users is: password123
+-- ===========================================
 
--- Insert sample PG listings
+-- Clear existing data in reverse dependency order (IMPORTANT: Run this first if you have existing data)
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE blog_hashtags;
+TRUNCATE TABLE blog_categories;
+TRUNCATE TABLE blogs;
+TRUNCATE TABLE pg_amenities;
+TRUNCATE TABLE pg_listings;
+TRUNCATE TABLE seniors;
+TRUNCATE TABLE valid_uids;
+SET FOREIGN_KEY_CHECKS = 1;
+
+-- Step 0: Insert valid UIDs for registration validation
+INSERT INTO valid_uids (uid) VALUES
+('ofss@spit.ac.in'),
+('om@spit.ac.in'),
+('omkar@spit.ac.in'),
+('vedang@spit.ac.in'),
+('aditya@spit.ac.in'),
+('vishwa@spit.ac.in'),
+('amit@spit.ac.in'),
+('amey@spit.ac.in');
+
+-- Step 1: Insert sample seniors (must be first as other tables reference this)
+-- Note: Passwords are BCrypt hashed for security (original password was 'password123')
+INSERT INTO seniors (uid, password) VALUES
+('senior1', '$2a$10$N.zmdr9k7uOCQb376NoUnulTJ8iKyRY9X3A2Zk4p6z1QJQbKdq9bOu'),
+('senior2', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iKyRY9X3A2Zk4p6z1QJQbKdq9bOu'),
+('senior3', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iKyRY9X3A2Zk4p6z1QJQbKdq9bOu'),
+('senior4', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iKyRY9X3A2Zk4p6z1QJQbKdq9bOu'),
+('senior5', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iKyRY9X3A2Zk4p6z1QJQbKdq9bOu');
+
+-- Step 2: Insert sample PG listings (references seniors table)
 INSERT INTO pg_listings (uid, aadhar, address, rent, distance, area, vacancies, beds_per_room, gender, notes) VALUES
 ('senior1', '123456789012', '123 Main Street, Andheri West', 12000, 500, 1, 2, 2, 'M', 'Near Metro Station'),
 ('senior1', '234567890123', '456 Park Road, Bandra East', 15000, 800, 2, 1, 3, 'F', 'Gated Society'),
@@ -29,7 +62,8 @@ INSERT INTO pg_listings (uid, aadhar, address, rent, distance, area, vacancies, 
 ('senior4', '901234567891', '741 Park Avenue, Borivali', 18500, 1050, 1, 1, 3, 'M', 'Near Park'),
 ('senior5', '012345678902', '963 Lake View, Powai', 20500, 1250, 2, 2, 2, 'F', 'Lake View');
 
--- Insert sample PG amenities
+-- Step 3: Insert sample PG amenities (references pg_listings table)
+-- Note: We have 20 PG listings, so amenities should reference IDs 1-20
 INSERT INTO pg_amenities (pg_id, amenity) VALUES
 (1, 'WiFi'), (1, 'AC'), (1, 'Food'),
 (2, 'WiFi'), (2, 'Laundry'), (2, 'Food'),
@@ -40,73 +74,105 @@ INSERT INTO pg_amenities (pg_id, amenity) VALUES
 (7, 'WiFi'), (7, 'AC'), (7, 'Parking'),
 (8, 'WiFi'), (8, 'Laundry'), (8, 'Food'),
 (9, 'WiFi'), (9, 'AC'), (9, 'Gym'),
-(10, 'WiFi'), (10, 'Laundry'), (10, 'Parking');
+(10, 'WiFi'), (10, 'Laundry'), (10, 'Parking'),
+(11, 'WiFi'), (11, 'Parking'),
+(12, 'WiFi'), (12, 'Laundry'),
+(13, 'WiFi'), (13, 'AC'),
+(14, 'WiFi'), (14, 'Food'),
+(15, 'WiFi'), (15, 'Gym'),
+(16, 'WiFi'), (16, 'AC'),
+(17, 'WiFi'), (17, 'Parking'),
+(18, 'WiFi'), (18, 'Laundry'),
+(19, 'WiFi'), (19, 'Food'),
+(20, 'WiFi'), (20, 'AC');
 
--- Insert sample blogs
+-- Step 4: Insert blogs (references seniors table)
 INSERT INTO blogs (uid, content) VALUES
-('senior1', 'My experience living in Andheri West has been amazing. The area is well-connected and has great food options.'),
-('senior2', 'Tips for finding the perfect PG in Mumbai: Always check the water supply and electricity backup.'),
-('senior3', 'The academic environment at SPIT is challenging but rewarding. Here are my study tips...'),
-('senior4', 'Local guide to the best street food near SPIT campus.'),
-('senior5', 'How to manage your expenses while living in a PG in Mumbai.'),
-('senior1', 'The importance of choosing the right roommates in a PG.'),
-('senior2', 'My journey from a small town to Mumbai for higher studies.'),
-('senior3', 'Best places to study near SPIT campus.'),
-('senior4', 'How to deal with homesickness while living in a PG.'),
-('senior5', 'Tips for maintaining a healthy lifestyle in a PG.'),
-('senior1', 'The role of technology in modern education at SPIT.'),
-('senior2', 'How to make the most of your college life while living in a PG.'),
-('senior3', 'The importance of networking during your college years.'),
-('senior4', 'Balancing academics and social life in college.'),
-('senior5', 'My experience with different PG accommodations in Mumbai.'),
-('senior1', 'How to prepare for technical interviews while in college.'),
-('senior2', 'The benefits of living in a PG vs. a rented apartment.'),
-('senior3', 'Tips for maintaining good relations with PG owners.'),
-('senior4', 'How to handle conflicts with roommates in a PG.'),
-('senior5', 'The importance of location when choosing a PG in Mumbai.');
+('senior1', 'Explored Carter Road last weekend with my PG mates — perfect spot to unwind after project submissions! Highly recommend the sunset view. #WeekendVibes #AndheriSpots'),
+('senior2', 'Before finalizing a PG, check distance from SPIT, water timings, and owner rules. Small details make big difference. #PGHunt #PGLife'),
+('senior3', 'Our SPIT football team had a great match this weekend! Sports really help balance the academic grind. #StudentSports #CampusVibes'),
+('senior4', 'Discovered a hidden gem — "Anand Vada Pav" near Andheri Station. Must-try for every SPITian! #MumbaiEats #BudgetMumbai'),
+('senior5', 'Proud to be part of the Cultural Committee this year! Planning fests really teaches teamwork and leadership. #CollegeLife #CollegeEvents'),
+('senior1', 'Weekends are for long walks, beach breezes, and reconnecting with friends. Juhu never disappoints! #WeekendPlans #LifeInMumbai'),
+('senior2', 'Andheri has tons of PG options, but not all are genuine. I used SPITians Bay filters to find verified listings and saved both time and money! #PGRecommendations #PGLife'),
+('senior3', 'Found a quiet café near SPIT for group studies. Great WiFi and affordable snacks. #StudySpots #SPITiansBay'),
+('senior4', 'Homesickness hits hard sometimes, but joining hostel game nights and PG group dinners really helps. #RoommateStories #StudentWellbeing'),
+('senior5', 'Balancing fitness and PG life? Join the local Andheri gym with student discounts — best stress relief! #StudentWellbeing #LifeInMumbai'),
+('senior1', 'SPIT innovation labs are amazing — currently exploring IoT for college projects. #TechAtSPIT #SPITCommunity'),
+('senior2', 'Networking starts in college! Join LinkedIn groups and alumni events early. You will thank yourself later. #Networking101 #CollegeLife'),
+('senior3', 'Managing expenses in Mumbai? Try cooking together with PG mates — cheaper and fun. #BudgetMumbai #PGLife'),
+('senior4', 'Annual SPIT Fest coming up! Excited to see juniors take charge this year. #CollegeEvents #SPITCommunity'),
+('senior5', 'Tried multiple PGs before settling — cleanliness, distance, and food quality matter the most. #PGRecommendations #PGLife'),
+('senior1', 'Preparing for interviews? Start with basics — SQL, Java, and mock interviews on weekends. #PlacementPrep #TechAtSPIT'),
+('senior2', 'Living in Mumbai teaches independence and time management like no classroom can. #LifeInMumbai #SPITiansBay'),
+('senior3', 'Roommate tip: Respect each other's space and share chores — makes PG life peaceful. #RoommateStories #StudentWellbeing'),
+('senior4', 'Conflict with roommates? Talk openly instead of holding grudges — communication solves most issues. #StudentWellbeing #PGLife'),
+('senior5', 'Choosing the right PG location saves hours of travel — Andheri West is ideal for SPIT students. #LocationMatters #PGHunt');
 
--- Insert sample blog categories
+-- Step 5: Insert blog categories (references blogs table)
+-- Note: Using valid categories from schema constraint and matching blog IDs
 INSERT INTO blog_categories (blog_id, category) VALUES
 (1, 'Campus Life'),
 (2, 'Housing Tips'),
-(3, 'Academic Experience'),
+(3, 'Campus Life'),
 (4, 'Local Guide'),
-(5, 'Student Resources'),
-(6, 'Housing Tips'),
-(7, 'Campus Life'),
-(8, 'Academic Experience'),
-(9, 'Student Resources'),
+(5, 'Campus Life'),
+(6, 'Campus Life'),
+(7, 'Housing Tips'),
+(8, 'Student Resources'),
+(9, 'Campus Life'),
 (10, 'Student Resources'),
 (11, 'Academic Experience'),
-(12, 'Campus Life'),
-(13, 'Academic Experience'),
-(14, 'Student Resources'),
+(12, 'Academic Experience'),
+(13, 'Housing Tips'),
+(14, 'Campus Life'),
 (15, 'Housing Tips'),
 (16, 'Academic Experience'),
-(17, 'Housing Tips'),
+(17, 'Campus Life'),
 (18, 'Housing Tips'),
-(19, 'Student Resources'),
+(19, 'Campus Life'),
 (20, 'Housing Tips');
 
--- Insert sample blog hashtags
+-- Step 6: Insert blog hashtags (references blogs table)
 INSERT INTO blog_hashtags (blog_id, hashtag) VALUES
-(1, '#SPITLife'),
-(2, '#PGTips'),
-(3, '#StudyTips'),
-(4, '#MumbaiFood'),
-(5, '#BudgetLiving'),
-(6, '#RoommateTips'),
-(7, '#CollegeLife'),
+(1, '#SPITiansBay'),
+(1, '#WeekendVibes'),
+(1, '#AndheriSpots'),
+(2, '#PGHunt'),
+(2, '#PGLife'),
+(3, '#StudentSports'),
+(3, '#CampusVibes'),
+(4, '#MumbaiEats'),
+(4, '#BudgetMumbai'),
+(5, '#CollegeLife'),
+(5, '#CollegeEvents'),
+(6, '#WeekendPlans'),
+(6, '#LifeInMumbai'),
+(7, '#PGRecommendations'),
+(7, '#PGLife'),
 (8, '#StudySpots'),
-(9, '#Homesickness'),
-(10, '#HealthyLiving'),
-(11, '#TechEducation'),
-(12, '#CollegeExperience'),
-(13, '#Networking'),
-(14, '#WorkLifeBalance'),
-(15, '#PGExperience'),
-(16, '#InterviewPrep'),
-(17, '#Accommodation'),
-(18, '#PGManagement'),
-(19, '#ConflictResolution'),
-(20, '#LocationMatters'); 
+(8, '#SPITiansBay'),
+(9, '#RoommateStories'),
+(9, '#StudentWellbeing'),
+(10, '#StudentWellbeing'),
+(10, '#LifeInMumbai'),
+(11, '#TechAtSPIT'),
+(11, '#SPITCommunity'),
+(12, '#Networking101'),
+(12, '#CollegeLife'),
+(13, '#BudgetMumbai'),
+(13, '#PGLife'),
+(14, '#CollegeEvents'),
+(14, '#SPITCommunity'),
+(15, '#PGRecommendations'),
+(15, '#PGLife'),
+(16, '#PlacementPrep'),
+(16, '#TechAtSPIT'),
+(17, '#LifeInMumbai'),
+(17, '#SPITiansBay'),
+(18, '#RoommateStories'),
+(18, '#StudentWellbeing'),
+(19, '#StudentWellbeing'),
+(19, '#PGLife'),
+(20, '#LocationMatters'),
+(20, '#PGHunt');

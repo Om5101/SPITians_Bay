@@ -1,29 +1,29 @@
 package com.spitbay.model;
 
-public class Senior {
-    private String uid;
-    private String password;
+import java.util.Objects;
 
-    public Senior() {}
-
+// Senior student who can post PG listings and blogs
+public class Senior extends User {
+    
     public Senior(String uid, String password) {
-        this.uid = uid;
-        this.password = password;
+        super(uid, password);
     }
-
-    public String getUid() {
-        return uid;
+    
+    @Override
+    public String toString() {
+        return "Senior [UID: " + getUid() + "]";
     }
-
-    public void setUid(String uid) {
-        this.uid = uid;
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Senior senior = (Senior) obj;
+        return Objects.equals(getUid(), senior.getUid());
     }
-
-    public String getPassword() {
-        return password;
+    
+    @Override
+    public int hashCode() {
+        return Objects.hash(getUid());
     }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-} 
+}

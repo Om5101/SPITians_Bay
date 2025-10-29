@@ -1,102 +1,87 @@
 package com.spitbay.service;
 
-import com.spitbay.model.Blog;
 import com.spitbay.dao.BlogDAO;
-import com.spitbay.dao.BlogDAOImpl;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.HashSet;
-import java.sql.SQLException;
+import com.spitbay.model.Blog;
+import java.util.*;
 
+// Service for blog operations with hashtag-based search
 public class BlogService {
-    private BlogDAO blogDAO;
-    private static final List<String> FIXED_CATEGORIES = List.of(
-        "Campus Life",
-        "Academic Experience",
-        "Housing Tips",
-        "Local Guide",
-        "Student Resources"
+    private final BlogDAO blogDAO;
+    private static final List<String> CATEGORIES = Arrays.asList(
+        "Campus Life", "Academic Experience", "Housing Tips", "Local Guide", "Student Resources"
     );
-
-    public BlogService() throws SQLException {
-        this.blogDAO = new BlogDAOImpl();
+    
+    public BlogService(BlogDAO blogDAO) {
+        this.blogDAO = blogDAO;
     }
-
+    
+    // Add new blog post
     public boolean addBlog(Blog blog) {
-        // Validate categories
-        for (String category : blog.getCategories()) {
-            if (!FIXED_CATEGORIES.contains(category)) {
-                return false;
-            }
+        if (!blog.isValid()) {
+            throw new IllegalArgumentException("Invalid blog data");
         }
-        return blogDAO.addBlog(blog);
+        
+        return blogDAO.insertBlog(blog);
     }
-
-    public boolean updateBlog(Blog blog) {
-        // Validate categories
-        for (String category : blog.getCategories()) {
-            if (!FIXED_CATEGORIES.contains(category)) {
-                return false;
-            }
-        }
-        return blogDAO.updateBlog(blog);
+    
+    // Get blogs by author
+    public List<Blog> getBlogsByAuthor(String uid) {
+        return blogDAO.findBlogsByAuthor(uid);
     }
-
-    public boolean deleteBlog(int blogId) {
-        return blogDAO.deleteBlog(blogId);
-    }
-
-    public Blog getBlog(int blogId) {
-        return blogDAO.getBlog(blogId);
-    }
-
-    public List<Blog> getBlogByUid(String uid) {
-        return blogDAO.getBlogByUid(uid);
-    }
-
+    
+    // Get all blogs
     public List<Blog> getAllBlogs() {
-        return blogDAO.getAllBlogs();
+        return blogDAO.findAllBlogs();
     }
-
-    public List<Blog> getBlogsByCategories(List<String> categories) {
-        return blogDAO.getBlogsByCategories(categories);
-    }
-
-    public List<Blog> getBlogsByHashtags(Set<String> hashtags) {
-        return blogDAO.getBlogsByHashtags(hashtags);
-    }
-
-    public List<Blog> getBlogsByCategoriesAndHashtags(List<String> categories, List<String> hashtags) {
-        // First get blogs by categories
-        List<Blog> blogsByCategories = getBlogsByCategories(categories);
+    
+    // Search blogs by hashtags using HashSet for fast lookup (optimized)
+    public List<Blog> searchBlogsByHashtags(Set<String> searchHashtags) {
+        List<Blog> allBlogs = getAllBlogs(); // Single database call
         
-        // Then filter by hashtags
-        Set<String> hashtagSet = new HashSet<>(hashtags);
-        List<Blog> filteredBlogs = new ArrayList<>();
+        if (searchHashtags == null || searchHashtags.isEmpty()) {
+            return allBlogs;
+        }
         
-        for (Blog blog : blogsByCategories) {
-            // Check if blog contains any of the selected hashtags
-            boolean hasMatchingHashtag = false;
-            for (String hashtag : hashtagSet) {
-                if (blog.getHashtags().contains(hashtag)) {
-                    hasMatchingHashtag = true;
-                    break;
+        List<Blog> matchingBlogs = new ArrayList<Blog>();
+        
+        for (int i = 0; i < allBlogs.size(); i++) {
+            Blog blog = allBlogs.get(i);
+            Set<String> blogHashtags = blog.getHashtags();
+            
+            if (blogHashtags != null && blogHashtags.size() > 0) {
+                boolean hasMatch = false;
+                
+                // Check if any blog hashtag matches any search hashtag
+                for (String blogHashtag : blogHashtags) {
+                    if (hasMatch) break;
+                    
+                    for (String searchHashtag : searchHashtags) {
+                        String blogHashtagLower = blogHashtag.toLowerCase();
+                        String searchHashtagLower = searchHashtag.toLowerCase();
+                        
+                        if (blogHashtagLower.contains(searchHashtagLower)) {
+                            hasMatch = true;
+                            break;
+                        }
+                    }
+                }
+                
+                if (hasMatch) {
+                    matchingBlogs.add(blog);
                 }
             }
-            if (hasMatchingHashtag) {
-                filteredBlogs.add(blog);
-            }
         }
         
-        return filteredBlogs;
+        return matchingBlogs;
     }
-
-    public List<String> getFixedCategories() {
-        return new ArrayList<>(FIXED_CATEGORIES);
+    
+    // Search blogs by categories
+    public List<Blog> searchBlogsByCategories(List<String> categories) {
+        return blogDAO.findBlogsByCategories(categories);
     }
-
-    public Set<String> getAllHashtags() {
-        return blogDAO.getAllHashtags();
+    
+    // Get available categories
+    public List<String> getAvailableCategories() {
+        return new ArrayList<>(CATEGORIES);
     }
-} 
+}

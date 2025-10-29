@@ -2,6 +2,11 @@
 CREATE DATABASE IF NOT EXISTS spit_bay;
 USE spit_bay;
 
+-- Create UID validation table (for registration validation only)
+CREATE TABLE IF NOT EXISTS valid_uids (
+    uid VARCHAR(50) PRIMARY KEY
+);
+
 -- Create seniors table
 CREATE TABLE IF NOT EXISTS seniors (
     uid VARCHAR(50) PRIMARY KEY,
@@ -12,7 +17,7 @@ CREATE TABLE IF NOT EXISTS seniors (
 CREATE TABLE IF NOT EXISTS pg_listings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     uid VARCHAR(50) NOT NULL,
-    aadhar VARCHAR(12) UNIQUE NOT NULL,
+    aadhar VARCHAR(255) UNIQUE NOT NULL, -- Increased size for BCrypt encryption
     address TEXT NOT NULL,
     rent INT NOT NULL,
     distance INT NOT NULL,
@@ -63,4 +68,12 @@ CREATE TABLE IF NOT EXISTS blog_hashtags (
     hashtag VARCHAR(50) NOT NULL,
     PRIMARY KEY (blog_id, hashtag),
     FOREIGN KEY (blog_id) REFERENCES blogs(id) ON DELETE CASCADE
-); 
+);
+
+-- Add indexes for better performance
+CREATE UNIQUE INDEX IF NOT EXISTS idx_seniors_uid ON seniors(uid);
+CREATE INDEX IF NOT EXISTS idx_pg_gender ON pg_listings(gender);
+CREATE INDEX IF NOT EXISTS idx_pg_uid ON pg_listings(uid);
+CREATE INDEX IF NOT EXISTS idx_blog_category ON blog_categories(category);
+CREATE INDEX IF NOT EXISTS idx_blog_hashtag ON blog_hashtags(hashtag);
+CREATE INDEX IF NOT EXISTS idx_valid_uids_uid ON valid_uids(uid); 

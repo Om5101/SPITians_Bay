@@ -26,27 +26,24 @@
 ---
 
 ## 🚀 Project Overview
-**SPITians Bay** is a community-driven prototype that enables SPIT students to find **PG accommodations** verified by seniors — completely **broker-free**.
 
-- Developed as part of the **Innovothon Finale Hackathon**.  
+![image1](https://github.com/user-attachments/assets/16b2c2da-ee9f-463a-bbb8-afb3ca7ae169)
+
+**SPITians Bay** is a community Platform that enables SPIT students to find **PG accommodations** verified by seniors — completely **broker-free**.
+
 - Focused on solving a real student problem: *lack of local rate knowledge and excessive broker charges*.  
-- Implements a **custom PG search & filtering algorithm** that ranks listings based on user preferences.
 
 **Objective:**  
-Empower juniors to find verified, affordable PGs through seniors already residing nearby — reducing dependency on brokers and saving substantial costs.
-
+ Helps juniors to find verified, affordable PGs through seniors already residing nearby — reducing dependency on brokers and saving brokerages.
 ---
 
 ## 🧑‍💻 Tech Stack
 - **Language:** Java (Core + OOP)
 - **Database:** MySQL (via JDBC)
 - **Architecture:** MVC (Model–View–Controller)
-- **Libraries/Utilities:** BCrypt for password hashing, HashSet for duplicate-free filtering
 - **Type:** Console-based Java Prototype
 
 ---
-
-## 🔄 SDLC Phases
 
 ### **1️⃣ Requirement Gathering**
 - Conducted informal research among SPIT juniors and peers.  
@@ -55,14 +52,16 @@ Empower juniors to find verified, affordable PGs through seniors already residin
   - High brokerage on platforms like NoBroker.  
 - Problem statement:  
   > “Create a community app where SPIT seniors can post PG vacancies and juniors can find verified, affordable accommodations without brokers.”
+  <img width="2400" height="1286" alt="477449300-a4c918d5-d4e3-4f33-b7d5-b410933a2ae1" src="https://github.com/user-attachments/assets/590a7d93-94ad-41c0-959c-09ac28fbceaa" />
+
 
 ---
 
 ### **2️⃣ Defining / Analysis Phase**
 - **Target Users:** SPIT students (verified by college email).  
 - **User Roles:**  
-  - 🧑‍🎓 **Junior:** Search and filter PGs.  
-  - 🧑‍🏫 **Senior:** Post verified PG listings.  
+  - 🧑‍🎓 **Junior:** Search and filter PGs and blogs.  
+  - 🧑‍🏫 **Senior:** Post verified PG listings and blogs.  
 - **Functional Scope:**  
   - User registration & authentication.  
   - PG listing & search with custom ranking.  
@@ -79,29 +78,66 @@ Empower juniors to find verified, affordable PGs through seniors already residin
   - Encapsulation in entity classes.
   - Polymorphism for role-based behavior.
   - Separation of concerns (DAO, Service, Controller layers).
+  ![My First Board](https://github.com/user-attachments/assets/79648441-401d-4249-a770-f34943d929df)
+  <img width="1050" height="756" alt="SPITians_Bay_Use_case" src="https://github.com/user-attachments/assets/69b6176d-80e9-4f78-b29e-88e9db74bbb7" />
+  <img width="782" height="560" alt="SPITian Bay Tables" src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" />
 
 ---
 
 ### **4️⃣ Building / Implementation Phase**
 
-#### 📁 **Project Structure**
+## Project Structure
+```
+src/main/java/com/spitbay/
+├── Main.java                 # Application entry point
+├── controller/               # Controllers for user interaction
+│   ├── MainController.java   # Main application flow
+│   └── InputHandler.java     # Input validation
+├── model/                    # Data models
+│   ├── User.java            # Base user model
+│   ├── Senior.java          # Senior user model
+│   ├── PGListing.java       # PG listing model
+│   ├── Blog.java            # Blog model
+│   └── SearchPreferences.java # Search preferences
+├── service/                  # Business logic layer
+│   ├── UserService.java     # User operations
+│   ├── PGService.java       # PG listing operations
+│   ├── BlogService.java     # Blog operations
+│   └── ScoringService.java  # PG scoring algorithm
+├── dao/                      # Data access layer
+│   ├── SeniorDAO.java       # Senior data access
+│   ├── PGListingDAO.java    # PG listing data access
+│   └── BlogDAO.java         # Blog data access
+├── view/                     # View layer for UI
+│   ├── MenuView.java        # Menu displays
+│   ├── AuthView.java        # Authentication views
+│   ├── BlogView.java        # Blog displays
+│   └── PGView.java          # PG listing displays
+├── database/                 # Database connection
+│   └── DatabaseConnection.java
+├── manager/                  # Service management
+│   └── ServiceManager.java
+└── util/                     # Utilities
+    └── SecurityUtil.java    # Security utilities
+```
 
-| Package | Files | Description |
-|----------|-------|-------------|
-| `com.spitbay.main` | `Main.java` | Entry point, initializes DB connection & menu navigation. |
-| `com.spitbay.model` | `User.java`, `PGListing.java`, `Blog.java`, `SearchPreferences.java`, `Senior.java` | Entity classes with encapsulation and constructors. |
-| `com.spitbay.dao` | `UserDAO.java`, `PGListingDAO.java`, `BlogDAO.java`, `SeniorDAO.java`, `UIDDAO.java` | Handles CRUD operations on MySQL. |
-| `com.spitbay.service` | `UserService.java`, `PGService.java`, `BlogService.java`, `ScoringService.java` | Contains business logic for authentication, PG management, scoring, blogs. |
-| `com.spitbay.controller` | `InputHandler.java`, `MainController.java` | Controls user actions, manages flow between views and services. |
-| `com.spitbay.util` | `SecurityUtil.java` | Handles password encryption and validation utilities. |
-| `com.spitbay.database` | `DatabaseConnection.java` | Establishes JDBC connection with MySQL. |
-| `com.spitbay.view` | `AuthView.java`, `PGView.java`, `MenuView.java`, `BlogView.java` | Handles console interactions and user menus. |
-| `com.spitbay.manager` | `ServiceManager.java` | Coordinates all services and dependencies. |
+## Features
+
+### For Seniors:
+- Login/Register
+- Add PG Listings with amenities
+- Add Blog Posts with categories and hashtags
+- View their own listings and blogs
+
+### For Freshers:
+- Search for PGs with weighted preferences
+- View all blogs
+- Filter blogs by categories or hashtags
+
 
 #### ⚙️ **Core Functionalities**
 - **Registration & Login:**
   - Validates SPIT mail (`@spit.ac.in`)  
-  - Hashes password using **BCrypt**  
 - **PG Listing Module (for Seniors):**
   - Add / Update / Delete listings  
 - **Custom Search Algorithm (for Juniors):**
@@ -143,11 +179,7 @@ Performed both **Unit** and **Functional** testing on modules.
 - Connected to local **MySQL database** using JDBC.  
 - Can be easily migrated to **Spring Boot + Web Frontend** due to modular architecture.
 
----
-
-## 🧱 DDLC (Hackathon Workflow)
-
-> **Design & Development Life Cycle** — simplified version of SDLC used in hackathons (24–48 hrs).
+---.
 
 | Phase | Description |
 |-------|--------------|
@@ -156,14 +188,6 @@ Performed both **Unit** and **Functional** testing on modules.
 | **3. Development** | Implemented modules incrementally: User → PG → Search → Blog. |
 | **4. Testing & Debugging** | Unit-tested JDBC connections & search logic; resolved input errors. |
 | **5. Presentation & Demo** | Demonstrated custom search algorithm and real impact (brokerage savings). |
-
----
-
-## 🏗️ Future Scope
-- Convert to **Spring Boot + React.js** web application.  
-- Integrate **Google Maps API** for distance-based search.  
-- Implement **JWT authentication**.  
-- Add **payment tracking and PG review system**.
 
 ---
 

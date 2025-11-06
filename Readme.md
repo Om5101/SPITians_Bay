@@ -6,7 +6,7 @@
 </figure>
 
 > **Platform for SPIT students to find nearby PGs without brokers — built using Core Java, JDBC, and MySQL.**  
-> Designed and implemented following **Software Development Life Cycle (SDLC)** and **Hackathon DDLC (Design & Development Life Cycle)**.
+> Designed and implemented following **Software Development Life Cycle (SDLC)**.
 
 ---
 
@@ -195,9 +195,6 @@ src/main/java/com/spitbay/
 
 ## 🔮 Future Scope
 - Upgrade to **Spring Boot + React.js** full-stack app.  
-- Add **Google Maps API** for distance-based search.  
-- Implement **JWT authentication** and PG ratings module.  
-- Add **payment tracking** for rent management.
 
 ---
 

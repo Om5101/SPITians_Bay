@@ -1,7 +1,7 @@
 # 🏠 SPITians Bay — Innovothon Finale Project
 
 <figure align="center">
-  <img src="https://github.com/Om5101/SPITians_Bay/blob/main/SPITians_Bay.jpg" alt="SPITians Bay Banner" style="max-width:90%;height:auto;">
+  <img src="https://github.com/user-attachments/assets/16b2c2da-ee9f-463a-bbb8-afb3ca7ae169" alt="Project Banner" style="max-width:90%;height:auto;">
   <figcaption><em>Figure 1: SPITians Bay – Community Platform Prototype</em></figcaption>
 </figure>
 
@@ -11,16 +11,15 @@
 ---
 
 ## 📋 Table of Contents
-1. [Project Overview](#-project-overview)
-2. [Hackathon Workflow](#-hackathon-workflow)
-3. [Tech Stack](#-tech-stack)
-4. [SDLC Phases](#-sdlc-phases)
-5. [Project Structure](#-project-structure)
-6. [Testing](#-testing)
-7. [Deployment](#-deployment)
-8. [Future Scope](#-future-scope)
-9. [Key Takeaways](#-key-takeaways)
-10. [Contact](#-contact)
+1. [Project Overview](#-project-overview)  
+2. [Hackathon Workflow](#-hackathon-workflow)  
+3. [Tech Stack](#-tech-stack)  
+4. [SDLC Phases](#-sdlc-phases)  
+5. [Project Structure](#-project-structure)  
+6. [Sample Test Cases](#-sample-test-cases)  
+7. [Future Scope](#-future-scope)  
+8. [Key Takeaways](#-key-takeaways)  
+9. [Contact](#-contact)
 
 ---
 
@@ -31,16 +30,13 @@
 **🎯 Objective:**  
 Help juniors find verified, affordable PGs through seniors already residing nearby — reducing dependency on brokers and saving brokerage costs.
 
-<figure align="center">
-  <img src="https://github.com/Om5101/SPITians_Bay/blob/main/SPITians_bay%20(2).jpg" alt="SPITians Bay Problem and Solution" style="max-width:85%;height:auto;">
-  <figcaption><em>Figure 2: Current Problems for New Joiners & Proposed Solution</em></figcaption>
-</figure>
-
 ---
 
-## 🧱 Hackathon Workflow
+## 🧱 Hackathon Workflow (DDLC)
 
-> Steps followed during the 48-hour Innovothon Hackathon — emphasizing speed, modularity, and collaboration.
+> The Steps followed during the 48-hour Innovothon Hackathon — emphasizing speed, modularity, and collaboration.
+
+<div align="center">
 
 | Phase | Description |
 |------:|-------------|
@@ -50,10 +46,11 @@ Help juniors find verified, affordable PGs through seniors already residing near
 | **4. Testing & Debugging** | Conducted unit and functional testing under hackathon deadlines. |
 | **5. Presentation & Impact** | Presented results: estimated ₹53+ Lakh brokerage savings for 450+ students. |
 
+</div>
+
 ---
 
 ## 🧑‍💻 Tech Stack
-
 - **Language:** Java (Core + OOP)  
 - **Database:** MySQL (via JDBC)  
 - **Architecture:** MVC (Model–View–Controller)  
@@ -68,14 +65,13 @@ Help juniors find verified, affordable PGs through seniors already residing near
 - Problem identified: students lack local rent knowledge and pay high brokerages.
 
 <figure align="center">
-  <img src="https://github.com/Om5101/SPITians_Bay/blob/main/Requirement_Gathering.jpg" alt="Requirement Gathering" style="max-width:85%;height:auto;">
-  <figcaption><em>Figure 3: Requirement Gathering – Surveys & Interviews</em></figcaption>
+  <img src="[https://drive.google.com/file/d/1GBfYnVEs-lvRXVSSjiyBgIJmjhmIwV5E/view?usp=drive_link](https://drive.google.com/file/d/1GBfYnVEs-lvRXVSSjiyBgIJmjhmIwV5E/view?usp=drive_link)" alt="Requirement Gathering" style="max-width:85%;height:auto;">
+  <figcaption><em>Figure 2: Requirement Gathering – Surveys & Interviews</em></figcaption>
 </figure>
 
 ---
 
 ### 2️⃣ Defining / Analysis
-
 - **Users:** SPIT students (verified by college email).  
 - **Roles:**  
   - 🧑‍🎓 **Junior:** Search and filter PGs, read blogs.  
@@ -86,24 +82,31 @@ Help juniors find verified, affordable PGs through seniors already residing near
 ---
 
 ### 3️⃣ Designing
-
 - Applied **MVC + DAO** architecture.  
 - Used **ERD** for database relationships (Users ↔ PGs ↔ Blogs).  
 - **Java** chosen for modular OOP structure, easy testing, and quick updates.
 
 <figure align="center">
-  <img src="https://github.com/Om5101/SPITians_Bay/blob/main/ERD.jpg" alt="ER Diagram" style="max-width:80%;height:auto;">
-  <figcaption><em>Figure 4: Entity-Relationship Diagram (Database Schema)</em></figcaption>
+  <img src="https://github.com/user-attachments/assets/79648441-401d-4249-a770-f34943d929df" alt="Architecture Diagram" style="max-width:80%;height:auto;">
+  <figcaption><em>Figure 3: High-Level Architecture (MVC + DAO)</em></figcaption>
 </figure>
 
 <figure align="center">
-  <img src="https://github.com/Om5101/SPITians_Bay/blob/main/UseCase.jpg" alt="Use Case Diagram" style="max-width:70%;height:auto;">
-  <figcaption><em>Figure 5: Use Case Diagram — Roles & Interactions</em></figcaption>
+  <img src="https://github.com/user-attachments/assets/69b6176d-80e9-4f78-b29e-88e9db74bbb7" alt="Use Case Diagram" style="max-width:70%;height:auto;">
+  <figcaption><em>Figure 4: Use Case Diagram — Roles & Interactions</em></figcaption>
+</figure>
+
+<figure align="center">
+  <img src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" alt="Database Tables" style="max-width:65%;height:auto;">
+  <figcaption><em>Figure 5: Database Schema & Table Relationships</em></figcaption>
+</figure>
+
+<figure align="center">
+  <img src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" alt="Database Tables" style="max-width:65%;height:auto;">
+  <figcaption><em>Figure 5: Database Schema & Table Relationships</em></figcaption>
 </figure>
 
 ---
-
-## 🏗️ Project Structure
 
 ## 4️⃣ Building / Implementation
 
@@ -162,21 +165,31 @@ src/main/java/com/spitbay/
 
 <div align="center">
 
+### 🧩 Unit Test Cases
+
+| No. | Description | Input | Expected Output | Result |
+|:--:|:--|:--|:--|:--:|
+| 1 | Valid SPIT email check | `om@spit.ac.in` | true | ✅ |
+| 2 | Invalid email check | `om@gmail.com` | false | ✅ |
+| 3 | Password hashing | `12345` | Hashed output | ✅ |
+| 4 | Database connection | JDBC URL | Connection success | ✅ |
+| 5 | Scoring algorithm | Rent=10k, Dist=2km | Computed score | ✅ |
+
+### 🧩 Functional Test Cases
+
+| No. | Description | Input | Expected Output | Result |
+|:--:|:--|:--|:--|:--:|
+| 6 | Registration | Valid SPIT mail | “Registration Successful” | ✅ |
+| 7 | Duplicate Registration | Existing UID | “User already exists” | ✅ |
+| 8 | PG Search Filter | Rent ≤15000, Wi-Fi=Yes | Filtered PG list | ✅ |
+| 9 | Invalid Login | Wrong password | “Invalid credentials” | ✅ |
+|10 | Search Ranking Order | Multiple PGs | Sorted list by score | ✅ |
+
+</div>
 
 ---
 
-| No. | Type | Description | Input | Expected Output | Result |
-|:--:|:--|:--|:--|:--|:--:|
-| 1 | Unit | Valid SPIT email check | `om@spit.ac.in` | true | ✅ |
-| 2 | Unit | Invalid email check | `om@gmail.com` | false | ✅ |
-| 3 | Unit | Password hashing | `12345` | Hashed output | ✅ |
-| 4 | Functional | Registration | Valid SPIT mail | “Registration Successful” | ✅ |
-| 5 | Functional | PG Search Filter | Rent ≤15000, Wi-Fi=Yes | Filtered PG list | ✅ |
-| 6 | Functional | Search Ranking | Multiple PGs | Sorted by score | ✅ |
-
----
-
-## 🚀 Deployment
+## 🚀 6️⃣ Deployment
 - Deployed as a **Console-based Java Application**.  
 - Connected to **MySQL database via JDBC**.  
 - Structured for easy transition to Spring Boot + React.
@@ -186,8 +199,8 @@ src/main/java/com/spitbay/
 ## 🔮 Future Scope
 - Upgrade to **Spring Boot + React.js** full-stack app.  
 - Add **Google Maps API** for distance-based search.  
-- Implement **JWT authentication** and PG ratings.  
-- Add **payment tracking** and rental management.
+- Implement **JWT authentication** and PG ratings module.  
+- Add **payment tracking** for rent management.
 
 ---
 
@@ -200,7 +213,6 @@ src/main/java/com/spitbay/
 ---
 
 ## 📧 Contact
-
 **👤 Author:** Om Shinde  
 **🏫 Institute:** Sardar Patel Institute of Technology, Mumbai  
 **📧 Email:** [omshinde@spit.ac.in](mailto:omshinde@spit.ac.in)  

@@ -34,7 +34,7 @@ Help juniors find verified, affordable PGs through seniors already residing near
 
 ## 🧱 Hackathon Workflow (DDLC)
 
-> The **Design & Development Life Cycle (DDLC)** followed during the 48-hour Innovothon Hackathon — emphasizing speed, modularity, and collaboration.
+> The Steps followed during the 48-hour Innovothon Hackathon — emphasizing speed, modularity, and collaboration.
 
 <div align="center">
 
@@ -65,7 +65,7 @@ Help juniors find verified, affordable PGs through seniors already residing near
 - Problem identified: students lack local rent knowledge and pay high brokerages.
 
 <figure align="center">
-  <img src="https://github.com/user-attachments/assets/b70c5f0c-75bc-4d76-8646-e86ee011ef3e
+  <img src="https://drive.google.com/file/d/1GBfYnVEs-lvRXVSSjiyBgIJmjhmIwV5E/view?usp=drive_link
 " alt="Requirement Gathering" style="max-width:85%;height:auto;">
   <figcaption><em>Figure 2: Requirement Gathering – Surveys & Interviews</em></figcaption>
 </figure>
@@ -95,6 +95,11 @@ Help juniors find verified, affordable PGs through seniors already residing near
 <figure align="center">
   <img src="https://github.com/user-attachments/assets/69b6176d-80e9-4f78-b29e-88e9db74bbb7" alt="Use Case Diagram" style="max-width:70%;height:auto;">
   <figcaption><em>Figure 4: Use Case Diagram — Roles & Interactions</em></figcaption>
+</figure>
+
+<figure align="center">
+  <img src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" alt="Database Tables" style="max-width:65%;height:auto;">
+  <figcaption><em>Figure 5: Database Schema & Table Relationships</em></figcaption>
 </figure>
 
 <figure align="center">

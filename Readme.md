@@ -65,8 +65,7 @@ Help juniors find verified, affordable PGs through seniors already residing near
 - Problem identified: students lack local rent knowledge and pay high brokerages.
 
 <figure align="center">
-  <img src="https://drive.google.com/file/d/1GBfYnVEs-lvRXVSSjiyBgIJmjhmIwV5E/view?usp=drive_link
-" alt="Requirement Gathering" style="max-width:85%;height:auto;">
+  <img src="[https://drive.google.com/file/d/1GBfYnVEs-lvRXVSSjiyBgIJmjhmIwV5E/view?usp=drive_link](https://drive.google.com/file/d/1GBfYnVEs-lvRXVSSjiyBgIJmjhmIwV5E/view?usp=drive_link)" alt="Requirement Gathering" style="max-width:85%;height:auto;">
   <figcaption><em>Figure 2: Requirement Gathering – Surveys & Interviews</em></figcaption>
 </figure>
 

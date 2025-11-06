@@ -32,7 +32,7 @@ Help juniors find verified, affordable PGs through seniors already residing near
 
 ---
 
-## 🧱 Hackathon Workflow (DDLC)
+## 🧱 Hackathon Workflow
 
 > The Steps followed during the 48-hour Innovothon Hackathon — emphasizing speed, modularity, and collaboration.
 
@@ -213,7 +213,6 @@ src/main/java/com/spitbay/
 **👤 Author:** Om Shinde  
 **🏫 Institute:** Sardar Patel Institute of Technology, Mumbai  
 **📧 Email:** [omshinde@spit.ac.in](mailto:omshinde@spit.ac.in)  
-**💻 GitHub:** [SPITians Bay Repository](https://github.com/Om5101/SPITians_Bay)
 
 ---
 

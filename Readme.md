@@ -98,7 +98,9 @@ Help juniors find verified, affordable PGs through seniors already residing near
 
 <figure align="center">
   <img src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" alt="Database Tables" style="max-width:65%;height:auto;">
+  <br>
   <figcaption><em> Database Schema & Table Relationships</em></figcaption>
+  </br>
 </figure>
 
 ---

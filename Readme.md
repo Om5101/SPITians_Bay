@@ -30,7 +30,7 @@
 **🎯 Objective:**  
 Help juniors find verified, affordable PGs through seniors already residing nearby — reducing dependency on brokers and saving brokerage costs.
 
-<img src = "/assets/img1.jpg">
+<img src = "/assets/img1.jpeg">
 
 ---
 
@@ -117,7 +117,7 @@ Help juniors find verified, affordable PGs through seniors already residing near
 
 <center>
 
-<img src = "./assets/img2.jpg">
+<img src = "./assets/img2.jpeg">
 
 <pre style="text-align:left; display:inline-block;">
 src/main/java/com/spitbay/

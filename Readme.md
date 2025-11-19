@@ -6,7 +6,7 @@
 </figure>
 
 > **Platform for SPIT students to find nearby PGs without brokers — built using Core Java, JDBC, and MySQL.**  
-> Designed and implemented following **Software Development Life Cycle (SDLC)**.
+> Designed and implemented following **Software Development Life Cycle (SDLC)** and **Hackathon DDLC (Design & Development Life Cycle)**.
 
 ---
 
@@ -30,11 +30,13 @@
 **🎯 Objective:**  
 Help juniors find verified, affordable PGs through seniors already residing nearby — reducing dependency on brokers and saving brokerage costs.
 
+<img src = "/assets/img1.jpg">
+
 ---
 
-## 🧱 Hackathon Workflow
+## 🧱 Hackathon Workflow 
 
-> The Steps followed during the 48-hour Innovothon Hackathon — emphasizing speed, modularity, and collaboration.
+> followed during the 48-hour Innovothon Hackathon — emphasizing speed, modularity, and collaboration.
 
 <div align="center">
 
@@ -64,10 +66,16 @@ Help juniors find verified, affordable PGs through seniors already residing near
 - Conducted quick surveys and interviews with juniors and seniors.  
 - Problem identified: students lack local rent knowledge and pay high brokerages.
 
-<figure align="center">
-  <img src="https://github.com/user-attachments/assets/590a7d93-94ad-41c0-959c-09ac28fbceaa" alt="Requirement Gathering" style="max-width:85%;height:auto;">
-  <figcaption><em>Figure 2: Requirement Gathering – Surveys & Interviews</em></figcaption>
-</figure>
+[//]: # (<figure align="center">)
+
+[//]: # (  <img src="https://github.com/user-attachments/assets/590a7d93-94ad-41c0-959c-09ac28fbceaa" alt="Requirement Gathering" style="max-width:85%;height:auto;">)
+
+[//]: # (  <figcaption><em>Figure 2: Requirement Gathering – Surveys & Interviews</em></figcaption>)
+
+[//]: # (</figure>)
+
+
+<img src = "./assets/img3.jpg">
 
 ---
 
@@ -96,11 +104,11 @@ Help juniors find verified, affordable PGs through seniors already residing near
   <figcaption><em>Figure 4: Use Case Diagram — Roles & Interactions</em></figcaption>
 </figure>
 
+<img src = "./assets/img4.jpg">
+
 <figure align="center">
   <img src="https://github.com/user-attachments/assets/6d8ea12d-1c49-4fda-8457-e18d3bce88c9" alt="Database Tables" style="max-width:65%;height:auto;">
-  <br>
-  <figcaption><em> Database Schema & Table Relationships</em></figcaption>
-  </br>
+  <figcaption><em>Figure 5: Database Schema & Table Relationships</em></figcaption>
 </figure>
 
 ---
@@ -108,6 +116,8 @@ Help juniors find verified, affordable PGs through seniors already residing near
 ## 4️⃣ Building / Implementation
 
 <center>
+
+<img src = "./assets/img2.jpg">
 
 <pre style="text-align:left; display:inline-block;">
 src/main/java/com/spitbay/
@@ -195,6 +205,9 @@ src/main/java/com/spitbay/
 
 ## 🔮 Future Scope
 - Upgrade to **Spring Boot + React.js** full-stack app.  
+- Add **Google Maps API** for distance-based search.  
+- Implement **JWT authentication** and PG ratings module.  
+- Add **payment tracking** for rent management.
 
 ---
 
@@ -210,6 +223,7 @@ src/main/java/com/spitbay/
 **👤 Author:** Om Shinde  
 **🏫 Institute:** Sardar Patel Institute of Technology, Mumbai  
 **📧 Email:** [omshinde@spit.ac.in](mailto:omshinde@spit.ac.in)  
+**💻 GitHub:** [SPITians Bay Repository](https://github.com/Om5101/SPITians_Bay)
 
 ---
 
